@@ -1,0 +1,639 @@
+<!--Soli Deo Gloria-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Scripts/Modos.js"></script>
+    <link rel="stylesheet" href="../CSS/ModoClaro.css" id="EstiloPagina">
+    <link rel="stylesheet" href="../CSS/SubtítulosComBackground.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button onclick="mudarModo()">mudar modo</button>
+            <a href="../index.html"> Index</a>
+            <a href="Estatistica.html">Estatística</a>
+            <a href="CalculadoraDeEstatisticas.html">Calculadora De Estatisticas</a>
+            <a href="Matrizes.html">Matrizes</a>
+            <a href="CalculadoraDeMatrizes.html"> Calculadora de Matrizes</a>
+            <a href="Determinantes.html">Determinantes</a>
+            <a href="Avaliacao.html">Avaliação</a>
+        </nav>
+        <style>
+            p {
+                font-size: 18px;
+            }
+
+            li {
+                font-size: 18px;
+            }
+        </style>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main>
+        <div class="maine-centralizado">
+            <h1>Matrizes</h1>
+            <hr color="black">
+            <br>
+            <ul>
+                <h1>O que são?</h1>
+                <p>
+                    Matrizes são um conjunto de números. Mais especificamente, eles
+                    possuem duas ou mais linhas e no mínimo uma coluna, são parecidos
+                    com um plano cartesiano, onde cada coordenada x e y possuem um valor.
+                    Também é possível explicar dizendo que são dois vetores.
+                </p>
+                <h1>Para que serve?</h1>
+                <p>
+                    Tem diversos usos, porém falarei em específico de minha área, a informática.
+                    As matrizes são muito utilizadas para a parte gráfica de um computador:
+                <ul>
+                    <li>São utilizadas amplamente para armazenar pixeis de imagens,</li>
+                    <li>São usados para fazer shaders que mudam a forma como o computador
+                        interpreta as cores ou então usado para efeitos de distorção, </li>
+                    <li>São usados para fazer mapas(da vida real ou mapas de jogos),</li>
+                    <li>São usadas para cálculos de computação gráfica usando cálculos de rotação, escala, translação e
+                        outras coisas mais.</li>
+                    <li>Podem ser usados em tabelas</li>
+                    <li>E muitos outros usos</li>
+                </ul>
+                </p>
+
+                <h1>Cálculos de Matrizes</h1>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <h2>Adição por escalar</h2>
+                        <p>Você basicamente soma todos os números da matriz
+                            mais o número escalar, por exemplo, somar 3 a essa matriz:</p>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+                        <p>Ela ficará assim:</p>
+
+                        <table>
+                            <tr>
+                                <td>(1+3) </td>
+                                <td>(2+3) </td>
+                            </tr>
+                            <tr>
+                                <td>(1+3) </td>
+                                <td>(2+3) </td>
+                            </tr>
+                        </table>
+                        <p>Após a soma:</p>
+                        <table>
+                            <tr>
+                                <td>4 </td>
+                                <td>5 </td>
+                            </tr>
+                            <tr>
+                                <td>4 </td>
+                                <td>5 </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <br>
+                    <li>
+                        <h2>Subtração por escalar</h2>
+                        <p>É exatamente igual a adição, porém com números negativos <br> Veja o exemplo subtraindo essa
+                            matriz por -7:</p>
+                        <table>
+                            <tr>
+                                <td>8</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>14</td>
+                            </tr>
+                        </table>
+                        <p>Ela ficará assim:</p>
+
+                        <table>
+                            <tr>
+                                <td>(8-7)</td>
+                                <td>(10-7)</td>
+                            </tr>
+                            <tr>
+                                <td>(12-7)</td>
+                                <td>(14-7)</td>
+                            </tr>
+                        </table>
+                        <p>Após a subtração:</p>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>7</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <br>
+                    <li>
+                        <h2>Produto por escalar</h2>
+                        <p>Parecido com a adição, você só multiplica o escalar por cada número da matriz <br>
+                            Exemplo multiplicando por 2: </p>
+                        <table>
+                            <tr>
+                                <td>2</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>7</td>
+                            </tr>
+                        </table>
+                        <p>Ele ficará assim:</p>
+                        <table>
+                            <tr>
+                                <td>(2*2)</td>
+                                <td>(4*2)</td>
+                            </tr>
+                            <tr>
+                                <td>(5*2)</td>
+                                <td>(7*2)</td>
+                            </tr>
+                        </table>
+                        <p>Após a multiplicação:</p>
+                        <table>
+                            <tr>
+                                <td>(2*2)</td>
+                                <td>(4*2)</td>
+                            </tr>
+                            <tr>
+                                <td>(5*2)</td>
+                                <td>(7*2)</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <br>
+                    <li>
+                        <h2>Produto de matriz</h2>
+                        <p>É a multiplicação de uma matriz por outra matriz. <br>
+                            Para fazer esse tipo de multiplicação, pegamos todos os elemento da primeira
+                            linha da matriz A e pegamos todos os elementos da primeira coluna da matriz B e
+                            multiplicamos o primeiro elemento da primeira linha da matriz A com o primeiro
+                            elemento da primeira coluna da matriz B. Após isso fazemos o mesmo mas agora
+                            com o segundo elemento da primeira linha da matriz A com o segundo elemento
+                            da priemira coluna da matriz B. E assim por diante até o fim da primeira linha
+                            de A pelo fim da primeira coluna de B. Após isso somamos todos os resultados.
+                            A soma de todos esse elementos será o primeiro elemento da primeira linha e
+                            primeira coluna da matriz C, que é a matriz que contém o resultado. <br>
+                            Para os outros elementos da matriz C, fazemos o mesmo processo, mas ao invés
+                            de usarmos a primeira linha de A e a primeira coluna de B, usamos a segunda
+                            linha de A ou a segunda linha de B. O resultado dessas multiplicações é um
+                            novo elemento da matriz C. A localização desse novo elemento tem a seguinte
+                            posição: A linha da matriz A que foi multiplicada e a coluna da Matriz B que
+                            foi multiplicada.<br> <br>
+                            OBS: A matriz C, que é a matriz do resultado da multiplicação, possui o número
+                            de linhas da matriz A e o número de colunas da matriz B <br> <br>
+                            Também é importante destacar que somente é possível realizar essa multiplicação
+                            se a quantidade de colunas da matriz A for igual a quantidade de linhas da matriz
+                            B. Se essas condições não forem atendidas, é impossível realizar a multiplicação.
+                        </p>
+                        <p><b>Exemplo 1:</b> <br>
+                            Matriz A:
+                        <table>
+                            <tr>
+                                <td>4</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>2</td>
+                            </tr>
+                        </table><br>
+                        Matriz B:
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+
+                        <br>
+                        Matriz C(resultado):
+                        <table>
+                            <tr>
+                                <td>[(4*1) + (3*3)]</td>
+                                <td>[(4*7) + (3*1)]</td>
+                            </tr>
+                            <tr>
+                                <td>[(5*1) + (2*3)]</td>
+                                <td>[(5*7) + (2*1)]</td>
+                            </tr>
+                        </table><br>
+                        Continuando:
+                        <table>
+                            <tr>
+                                <td>[(4) + (9)]</td>
+                                <td>[(28) + (3)]</td>
+                            </tr>
+                            <tr>
+                                <td>[(5) + (6)]</td>
+                                <td>[(35) + (2)]</td>
+                            </tr>
+                        </table><br>
+                        Resultado da matriz C:
+                        <table>
+                            <tr>
+                                <td>13</td>
+                                <td>31</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>37</td>
+                            </tr>
+                        </table> <br>
+                        </p>
+                        <br>
+                        <p><b>Exemplo 2:</b> <br>
+                            Matriz A (2X<b>3</b>):
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                        <br>
+                        Matriz B (<b>3</b>X2):
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+
+                        <br>
+                        Matriz C(<b>2 x 2</b>):
+                        <table>
+                            <tr>
+                                <td>[(1*1) + (3*0) + (2*3)]</td>
+                                <td>[(1*2) + (3*4) + (2*2)]</td>
+                            </tr>
+                            <tr>
+                                <td>[(0*1) + (4*0) + (1*3)]</td>
+                                <td>[(0*2) + (4*4) + (1*2)]</td>
+                            </tr>
+                        </table><br>
+                        Continuando:
+                        <table>
+                            <tr>
+                                <td>[(1) + (0) + (6)]</td>
+                                <td>[(2) + (12) + (4)]</td>
+                            </tr>
+                            <tr>
+                                <td>[(0) + (0) + (3)]</td>
+                                <td>[(0) + (16) + (2)]</td>
+                            </tr>
+                        </table><br>
+                        Resultado da matriz C:
+                        <table>
+                            <tr>
+                                <td>7</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>18</td>
+                            </tr>
+                        </table> <br>
+                        </p>
+                    </li>
+                    <br>
+                </ul>
+                <h1>Operações Gráficas</h1>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <h2>Transposta</h2>
+                        <p>Não é necessariamente uma operação gráfica, mas quis colocar aqui.<br>
+                            A operação de transpor uma matriz é basicamente inverter
+                            suas linhas com suas colunas, isto é, fazer com que os
+                            elementos da primeira linha virem os elementos da primeira
+                            coluna, e os elementos da primeira coluna, virem os da
+                            primeira linha.<br>
+                            Uma observação importante é que isso muda a ordem da matriz,
+                            por exemplo, se antes era uma matriz 2x4, a versão transposta
+                            dela é uma matriz 4x2.<br>
+                            Para representar que uma matriz foi transposta, costuma-se
+                            colocar uma "T" no canto superior dela, desta maneira:
+                            A<sup>T</sup>, isso significa que a matriz A<sup>T</sup>
+                            é a versão transposta da matriz A.
+                        </p>
+                        <p><b>Exemplo 1:</b><br>
+                            Matriz A(3x2):
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>8</td>
+                            </tr>
+                            <br>
+                        </table>
+                        A<sup>T</sup>:
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>8</td>
+                            </tr>
+                        </table>
+                        </p>
+                    </li>
+                    <br>
+                    <li>
+                        <h2>Escala</h2>
+                        <p>A escala muda o tamanho da matriz, é mais comumente
+                            usado em matrizes com somente duas linhas, sendo que
+                            cada coluna representa uma coordenada x e y. <br>
+                            Para fazer essa transformação basta multiplicar essa
+                            matriz por uma outra matriz 2x2, cujo valor da
+                            primeira linha e primeira coluna é o valor que
+                            você quer multiplicar pela coordenada x e cujo valor da
+                            segunda linha e segunda coluna é o valor que você
+                            quer multiplicar pelo y. <br>
+                            OBS: Os valores que estão na primeira linha na segunda
+                            coluna e na segunda linha na primeira coluna são
+                            necessariamente 0 para o cálculo funcionar.<br>
+                            Outra observação é que isso também costuma mudar
+                            a localização da matriz, ela se desolca um pouco.
+                        </p>
+                        <p><b>Exemplo de um quadrado:</b><br>
+                        <table>
+                            <tr>
+                                <td>x</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>y</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>3</td>
+                            </tr>
+                        </table>
+                        Imagem produzida:
+                        <table>
+                            <tr>
+                                <td style="background-color: black; height: 45px; width: 45px; color: white;"> x1 y3
+                                </td> <!--1-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--2-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--3-->
+                                <td style="background-color: black; height: 45px; width: 45px; color: white;"> x4 y3
+                                </td> <!--4-->
+                            </tr>
+                            <tr>
+                                <td style="background-color: black; height: 45px; width: 45px;;"> </td> <!--1-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td>
+                                <!--2-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td>
+                                <!--3-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--4-->
+                            </tr>
+                            <tr>
+                                <td style="background-color: black; height: 45px; width: 45px; color: white;"> x1 y1
+                                </td> <!--1-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--2-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--3-->
+                                <td style="background-color: black; height: 45px; width: 45px; color: white;"> x4 y1
+                                </td> <!--4-->
+                            </tr>
+                        </table> <br>
+                        Agora, multiplicando pela Matriz B(2x2):
+                        <table>
+                            <tr>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>3</td>
+                            </tr>
+                        </table><br>
+                        Resultado:
+                        <table>
+                            <tr>
+                                <td>[(2*1) + (0*1)]</td>
+                                <td>[(2*4) + (0*1)]</td>
+                                <td>[(2*1) + (0*3)]</td>
+                                <td>[(2*4) + (0*3)]</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>[(0*1) + (3*1)]</td>
+                                <td>[(0*4) + (3*1)]</td>
+                                <td>[(0*1) + (3*3)]</td>
+                                <td>[(0*4) + (3*3)]</td>
+                            </tr>
+                        </table><br>
+                        Continuando:
+                        <table>
+                            <tr>
+                                <td>2 + 0</td>
+                                <td>8 + 0</td>
+                                <td>2 + 0</td>
+                                <td>8 + 0</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>0 + 3</td>
+                                <td>0 + 3</td>
+                                <td>0 + 9</td>
+                                <td>0 + 9</td>
+                            </tr>
+                        </table><br>
+                        Resultado final:
+                        <table>
+                            <tr>
+                                <td>2</td>
+                                <td>8</td>
+                                <td>2</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>9</td>
+                                <td>9</td>
+                            </tr>
+                        </table><br>
+
+
+                        Nova imagem produzida:
+                        <table>
+                            <tr> <!--8 Linhas-->
+                                <td style="background-color: black; height: 45px; width: 45px; text-align: center; color:white">x1 y8</td> <!--1 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--2 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--3 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--4 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--5 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--6 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--7 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--8 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px; text-align: center; color:white">x9 y8</td> <!--9 colunas-->
+                            </tr>
+                            <tr> <!--7 Linhas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--1 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--2 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--3 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--4 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--5 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--6 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--7 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--8 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--9 colunas-->
+                            </tr>
+                            <tr> <!--6 Linhas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--1 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--2 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--3 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--4 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--5 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--6 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--7 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--8 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--9 colunas-->
+                            </tr>
+                            <tr> <!--5 Linhas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--1 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--2 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--3 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--4 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--5 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--6 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--7 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--8 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--9 colunas-->
+                            </tr>
+                            <tr> <!--4 Linhas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--1 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--2 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--3 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--4 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--5 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--6 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--7 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--8 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--9 colunas-->
+                            </tr>
+                            <tr> <!--3 Linhas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--1 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--2 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--3 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--4 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--5 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--6 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--7 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--8 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--9 colunas-->
+                            </tr>
+                            <tr> <!--2 Linhas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--1 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--2 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--3 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--4 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--5 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--6 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--7 colunas-->
+                                <td style="background-color: rgb(255, 255, 255); height: 45px; width: 45px;"> </td> <!--8 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--9 colunas-->
+                            </tr>
+                            <tr> <!--1 Linhas-->
+                                <td style="background-color: black; height: 45px; width: 45px; text-align: center; color:white">x1 y1</td> <!--1 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--2 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--3 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--4 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--5 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--6 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--7 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px;"> </td> <!--8 colunas-->
+                                <td style="background-color: black; height: 45px; width: 45px; text-align: center; color:white"> x9 y1</td> <!--9 colunas-->
+                            </tr>
+                        </table> <br>
+
+
+                        </p>
+                    </li>
+                    <br>
+                    <li>
+                        <h2>Rotação</h2>
+
+                    </li>
+                    <br>
+                    <li>
+                        <h2>Reflexão</h2>
+
+                    </li>
+                    <br>
+                    <li>
+                        <h2>Translação</h2>
+                        <p>É basicamente somar números a matriz de duas linhas
+                            que contém as coordenadas x e y dos pontos.</p>
+                    </li>
+                </ul>
+                <h1>Uma observação muito importante a se fazer é que boa parte dessas equações estão
+                    incluídas na página: <a href="CalculadoraDeMatrizes.html">Calculadora de Matrizes</a>
+                </h1>
+            </ul>
+
+        </div>
+    </main>
+</body>
+
+</html>
