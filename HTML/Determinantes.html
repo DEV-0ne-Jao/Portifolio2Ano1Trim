@@ -1,0 +1,267 @@
+<!--Soli Deo Gloria-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Scripts/Modos.js"></script>
+    <link rel="stylesheet" href="../CSS/ModoClaro.css" id="EstiloPagina">
+    <link rel="stylesheet" href="../CSS/SubtítulosComBackground.css">
+    <style>
+        p {
+            font-size: 18px;
+        }
+
+        li {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <button onclick="mudarModo()">mudar modo</button>
+        <a href="../index.html"> Index</a>
+        <a href="Estatistica.html">Estatística</a>
+        <a href="CalculadoraDeEstatisticas.html">Calculadora De Estatisticas</a>
+        <a href="Matrizes.html">Matrizes</a>
+        <a href="CalculadoraDeMatrizes.html"> Calculadora de Matrizes</a>
+        <a href="Determinantes.html">Determinantes</a>
+        <a href="Avaliacao.html">Avaliação</a>
+
+    </header>
+    <br>
+    <br>
+    <main>
+        <div class="maine-centralizado">
+            <h1>Determinantes</h1>
+            <hr>
+            <br>
+            <ul>
+                <h1>O que são?</h1>
+                <p>Toda matriz quadrada possui um número associado a ela, o nome desse
+                    número é "determinante". Nós não chegamos a estudar os usos deles.<br>
+                    Costuma se representar o determinante da seguinte maneira:<br>
+                    det(<b>nome da mariz</b>): <b>Valor do determinante</b>
+                </p>
+
+                <br>
+                <h2>Matriz 2x2</h2>
+                <p>Para calcular o determinante de matrizes 2x2 basta multiplicar os
+                    números da linha principal e subtrair pela multiplicação dos números
+                    da linhas secundária.
+                </p>
+                <p><b>Exemplo 1 (a linha principal está em verde e a secundária em vermelho):</b> <br>
+                <table>
+                    Matriz A:
+                    <tr>
+                        <td style="background-color: rgb(0, 255, 0); border-radius: 3px; padding: 3px;">2</td>
+                        <td style="background-color: rgb(255, 0, 0); border-radius: 3px; padding: 3px;">3</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td style="background-color: rgb(255, 0, 0); border-radius: 3px; padding: 3px;">1</td>
+                        <td style="background-color: rgb(0, 255, 0); border-radius: 3px; padding: 3px;">5</td>
+                    </tr>
+                </table><br>
+                Calculando: <br>
+                det(A) = (2*5) - (3*1)<br>
+                det(A) = 10 - 3 <br>
+                det(A) = <b>7</b>
+                </p>
+                <p><b>Exemplo 2 (a linha principal está em verde e a secundária em vermelho):</b> <br>
+                <table>
+                    Matriz B:
+                    <tr>
+                        <td style="background-color: rgb(0, 255, 0); border-radius: 3px; padding: 3px;">1</td>
+                        <td style="background-color: rgb(255, 0, 0); border-radius: 3px; padding: 3px;">7</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td style="background-color: rgb(255, 0, 0); border-radius: 3px; padding: 3px;">3</td>
+                        <td style="background-color: rgb(0, 255, 0); border-radius: 3px; padding: 3px;">9</td>
+                    </tr>
+                </table><br>
+                Calculando: <br>
+                det(B) = (1*9) - (7*3)<br>
+                det(B) = 9 - 21 <br>
+                det(B) = <b>-12</b>
+                </p>
+                <h2>Matriz 3x3</h2>
+                <p>
+                    Calcular o determinante de matrizes 3x3 é bem mais difícil do
+                    que calcular o determinante de uma matriz 2x2.<br>
+                    Para calcular o determinante de uma matriz 3x3 você deve
+                    somar todas as multiplicações entre todos os elementos em
+                    todas as diferentes linhas verticais descendentes e subtrair
+                    pela multiplicação de todas os elementos de todas as diferentes
+                    linhas verticais acendentes.<br>
+                    Essa operação também é chamada de regra de Sarrus<br>
+                    Para representar em um desenho, ficaria assim: <br> <br>
+                    <img src="../Imagens/Determinante.jpg" height="150px">
+                </p>
+                <p><b>Exemplo 1:</b>
+                <table>
+                    Matriz A:
+                    <tr>
+                        <td>1</td>
+                        <td>8</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>-3</td>
+                        <td>2</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>7</td>
+                    </tr>
+                </table>
+                </p>
+                <p>
+                    Cálculo:<br>
+                    det(A) = (1*2*7) + (8*0*2) + (5*-3*4) - (5*2*2) - (1*0*4) - (8*-3*7)<br>
+                    det(A) = (14) + (0) + (-60) - (20) - (0) - (-168)<br>
+                    det(A) = -46 + 148<br>
+                    det(A) = <b>102</b>
+                </p><br>
+                <p><b>Exemplo 2:</b>
+                <table>
+                    Matriz B:
+                    <tr>
+                        <td>-3</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>5</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>8</td>
+                        <td>6</td>
+                    </tr>
+                </table>
+                </p>
+                <p>
+                    Cálculo:<br>
+                    det(B) = (-3*5*6) + (1*2*3) + (4*7*8) - (4*5*3) - (-3*2*8) - (1*7*6)<br>
+                    det(B) = (-90) + (6) + (224) - (60) - (-48) - (42)<br>
+                    det(B) = 140 - 54<br>
+                    det(B) = <b>86</b>
+                </p>
+                <br>
+                <h2>Matriz de ordem maior do que 3</h2>
+                <p>É muito difícil fazer o determinante de uma matriz de ordem
+                    maior que 3, por isso foi inventada a regra de Chió, que
+                    é capaz de diminuir por um a ordem da matriz.<br>
+                    Para aplicar a regra de Chió basta separar a primeira linha
+                    e a primeira coluna de uma matriz, e em seguida pegar cada
+                    elemento da matriz que não pertence a primeira fileira e nem
+                    a primeira coluna e diminuir pela multiplicação do primeiro
+                    elemento de sua coluna com o primeiro elemento de sua linha. <br>
+                    OBS: Para aplicar a regra de Chió é necessário que o elemento
+                    da primeira linha e da primeira coluna seja igual a 1;
+                </p><br>
+                <p><b>Exemplo 1:</b>
+                <table>
+                    Matriz A:
+                    <tr>
+                        <td style="background-color: rgba(0, 0, 0, 0.2); border-radius: 3px;">1</td>
+                        <td style="background-color: rgba(0, 0, 0, 0.1); border-radius: 3px;">2</td>
+                        <td style="background-color: rgba(0, 0, 0, 0.1); border-radius: 3px;">4</td>
+                        <td style="background-color: rgba(0, 0, 0, 0.1); border-radius: 3px;">3</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgba(0, 0, 0, 0.1); border-radius: 3px;">2</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgba(0, 0, 0, 0.1); border-radius: 3px;">3</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgba(0, 0, 0, 0.1); border-radius: 3px;">1</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    Cálculo:
+                    <tr>
+                        <td>0 - (2*2)</td>
+                        <td>1 - (4*2)</td>
+                        <td>3 - (3*2)</td>
+                    </tr>
+                    <tr>
+                        <td>5 - (2*3)</td>
+                        <td>6 - (4*3)</td>
+                        <td>3 - (3*3)</td>
+                    </tr>
+                    <tr>
+                        <td>3 - (2*1)</td>
+                        <td>2 - (4*1)</td>
+                        <td>0 - (3*1)</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    Cálculo:
+                    <tr>
+                        <td>0 - (4)</td>
+                        <td>1 - (8)</td>
+                        <td>3 - (6)</td>
+                    </tr>
+                    <tr>
+                        <td>5 - (6)</td>
+                        <td>6 - (12)</td>
+                        <td>3 - (9)</td>
+                    </tr>
+                    <tr>
+                        <td>3 - (2)</td>
+                        <td>2 - (4)</td>
+                        <td>0 - (3)</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    Resultado:
+                    <tr>
+                        <td>-4</td>
+                        <td>-7</td>
+                        <td>-3</td>
+                    </tr>
+                    <tr>
+                        <td>-1</td>
+                        <td>-6</td>
+                        <td>-6</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>-2</td>
+                        <td>-3</td>
+                    </tr>
+                </table>
+                </p>
+                <h2>Propriedades</h2>
+                <h2>Equações matriciais</h2>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>

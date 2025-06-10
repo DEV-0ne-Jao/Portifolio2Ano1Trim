@@ -1,0 +1,163 @@
+<!--Soli Deo Gloria-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Scripts/Modos.js"></script>
+    <link rel="stylesheet" href="../CSS/ModoClaro.css" id="EstiloPagina">
+    <link rel="stylesheet" href="../CSS/SubtítulosComBackground.css">
+</head>
+
+<body>
+    <header>
+
+            <button onclick="mudarModo()">mudar modo</button>
+            <a href="../index.html"> Index</a>
+            <a href="Estatistica.html">Estatística</a>
+            <a href="CalculadoraDeEstatisticas.html">Calculadora De Estatisticas</a>
+            <a href="Matrizes.html">Matrizes</a>
+            <a href="CalculadoraDeMatrizes.html"> Calculadora de Matrizes</a>
+            <a href="Determinantes.html">Determinantes</a>
+            <a href="Avaliacao.html">Avaliação</a>
+
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main>
+        <div class="maine-centralizado">
+            <h1>Estatística</h1>
+            <hr color="black">
+            <br>
+            <ul>
+                <h2>Média(M)</h2>
+                <p>A média é a soma de todos os números divido pela quantidade de números do conjunto</p>
+                <p><b>Fórmula:</b>(de uma forma mais básica e fácil de entender) <br>
+                    M = (n<sub>1</sub> + n<sub>2</sub> + n<sub>3</sub> ... + n<sub>n</sub>) / n
+                </p>
+                <p><b>Exemplo 1:</b> <br>
+                    conjunto de números: 1, 2, 3, 4, 5 <br>
+                    M = (1 + 2 + 3 + 4 + 5) / 5(quantiade de números do conunto) <br>
+                    M = 15 / 5 <br>
+                    M = 3
+                </p>
+                <p><b>Exemplo 2:</b> <br>
+                    conjunto de números: 7, 2, 11, 4, 6 <br>
+                    M = (7 + 2 + 11 + 4 + 6) / 5(quantiade de números do conunto) <br>
+                    M = 30 / 5 <br>
+                    M = 6
+                </p>
+                <h2>Moda</h2>
+                <p>A moda é o número que mais se repete em um determinado conjunto de números <br>
+                    Para calcular a moda basta contar quantas vezes os numeros aparecem e ver
+                    qual se repetiu mais vezes, uma coisa que pode ajudar nessa contagem é
+                    organizar os números do menor para o maior. <br>
+                    Se dois números se repetirem a mesma quantidade de vezes e esses dois
+                    tiverem a maior frequência do conjunto de números, você deve considerar
+                    os dois como a moda. Nesse caso ele seria bimodal. Se tiver mais do que
+                    dois números com a maior frequência, então todos serão modas e será
+                    multimodal.
+                </p>
+                <p>
+                    <b>Exemplo 1:</b><br>
+                    Conjunto de números: 2, 2, 4, 6, 19, 2, 4<br>
+                    Moda: 2, pois o número '2' se repete 3 vezes, possuindo assim a maior frequência
+                </p>
+                <p>
+                    <b>Exemplo 2:</b><br>
+                    Conjunto de números: 1, 1, 3, 6, 9, 3, 4<br>
+                    Moda: 1 e 3, pois os dois possuem a maior frequência. A moda é bimodal
+                </p>
+                <p>
+                    <b>Exemplo 3:</b><br>
+                    Conjunto de números: 1, 7, 8, 2, 4, 5, 10, 7, 2, 1, 5, 2, 1, 7<br>
+                    Moda: 1, 2 e 7, pois os três possuem a maior frequência. A moda é multimodal
+                </p>
+
+                <h2>Mediana</h2>
+                <p>A Mediana é o "numero do meio" em uma sequência de números. <br>
+                    Para calcular a mediana, basta você pegar todos os numeros
+                    do conjunto e ordená-los do menor para o maior, então é só
+                    observar qual foi o número que ficou no meio dessa sequência. <br>
+                    Porém, se a quantidade total de numeros for par, não terá um
+                    único número no meio, terão dois, nesse caso você deve pegar
+                    esses dois números e fazer a média entre eles, essa será a mediana.
+                </p>
+                <p><b>Exemplo:</b> <br>
+                    Sequência de números: 10, 3, 7, 1, 0 <br>
+                    Primeiro você deve ordenar do menor para o maior: 0, 1, 3, 7, 10 <br>
+                    Nesse caso podemos ver que o '3' é o número do meio, logo, ele é a mediana.
+                </p>
+                <p><b>Outro exemplo:</b> <br>
+                    Sequência de números: 8, 10, 2, 0, 4, 6
+                    Primeiro você deve ordenar do menor para o maior: 0, 2, 4, 6, 8, 10
+                    Nesse caso podemos ver que o '4' e o '6' são os números do meio. <br>
+                    Nessa situação fazemos a média entre o 4 e o 6, e o resultado é 5. <br>
+                    5 é a mediana.
+                </p>
+                <hr color="black">
+                <p style="font-size: 20px;">A partir daqui fica um pouquinho mais complicado</p>
+                <h2>Variância(V)</h2>
+                <p>A variância define o quanto o conjunto de números varia em relação a sua média. <br>
+                    Para podermos calcular a variância primeiro precisamos calcular a média.
+                </p>
+                <p><b>Fórmula:</b> <br>
+                    <img src="../Imagens/Variancia.jpg" height="60px" style="border-radius: 10px;"><br>
+                    Em outra palavras: é a soma de todos os números vezes eles mesmos menos a média elevado a dois. <br>
+                    Fazendo a fórmula: V = [ (x<sub>1</sub> - M)<sup>2</sup> + (x<sub>2</sub> - M)<sup>2</sup> + ... +
+                    (x<sub>n</sub> - M)<sup>2</sup> ] /n
+                </p>
+                <p><b>Exemplo:</b> <br>
+                    Sequência de números: 10, 3, 7, 1, 4 <br>
+                    M = (10 + 3 + 7 + 1 + 4) / 5<br>
+                    M = 25 / 5 <br>
+                    M = 5 <br>
+                    <br>
+                    Agora calculamos a variância <br>
+                    V = [ (10 - 5)<sup>2</sup> + (3 - 5)<sup>2</sup> + (7 - 5)<sup>2</sup> + (1 - 5)<sup>2</sup> + (4 -
+                    5)<sup>2</sup> ] / 5 <br>
+                    V = [ (5)<sup>2</sup> + (-2)<sup>2</sup> + (2)<sup>2</sup> + (-4)<sup>2</sup> + (-1)<sup>2</sup> ]
+                    /5 <br>
+                    V = [ 25 + 4 + 4 + 16 + 1 ] /5 <br>
+                    V = 50 / 5 <br>
+                    V = 10
+                </p>
+                <h2>Desvio Padrão(DP)</h2>
+                <p>A variância acaba por mudar a unidade de medida de algumas coisas
+                    quando eleva ela ao quadrado, por isso existe o desvio padrão,
+                    para pegar a raiz da variância e fazer voltar a mesma unidade
+                    de medida
+                </p>
+                <p><b>Fórmula:</b> <br>
+                    DP = &radic;V
+                </p>
+                <p><b>Exemplo:</b> <br>
+                    Pegarei a variância do exemplo anterior.<br>
+                    DP = &radic;10 <br>
+                    DP &#8776; 3,1623
+                </p>
+                <h2>Coeficiente de Variação(CV)</h2>
+                <p>O coenficiente de variação basicamente transforma o DP em uma porcentagem</p>
+                <p><b>Fórmula:</b> <br>
+                    CV = (DP / M) * 100
+                </p>
+                <p><b>Exemplo:</b> <br>
+                    Pegarei o DP e a Média do exemplo da Variância.<br>
+                    CV = (3,1623 / 5) * 100<br>
+                    CV = 0.63246 * 100<br>
+                    CV &asymp; 63,246%
+                </p>
+
+            </ul>
+
+        </div>
+    </main>
